@@ -1,0 +1,12 @@
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+outline: none;
+}
+
+body{
+box-sizing: border-box;
+background-color:rgba(0,0,0,0,0.3);
+font-family: sans-serif;
+}
