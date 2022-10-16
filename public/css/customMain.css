@@ -1,0 +1,25 @@
+#containerMain{
+    display: flex;
+    height: 80vh;
+    gap: 2rem;
+    margin-top: 1rem;
+   justify-content: center;
+
+}
+
+#containerMain .customSection{
+    box-shadow: .1rem .2rem 1rem #e7e7e7;
+    width: 40vw;
+    height: 60vh;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#containerMain .customSection p{
+    text-align: justify;
+    margin-top: 1rem;
+    color: #333;
+}

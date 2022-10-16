@@ -17,15 +17,15 @@
         <h3 class="card-title">Realizar pergunta</h3>
         <h5 class="card-subtitle mb-2 text-muted">faça sua pergunta no formulario abaixo</h5>
     </div>
-    <form action="/">
+    <form  action="/ListaPerguntas" method="post">
       <div class="card-body">
           <div class="mb-3">
               <label >Título</label>
-              <input type="text" class="form-control" placeholder="Título">
+              <input type="text" class="form-control" placeholder="Título" name="titulo">
           </div>
           <div class="mb-3">
               <label for="">Assunto</label>
-              <textarea placeholder="escreva a pergunta" class="form-control"></textarea>
+              <textarea placeholder="escreva a pergunta" class="form-control" name="assunto"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">enviar</button>
           <button class="btn btn-outline-primary">cancelar</button>

@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/reset.css  ">
+    <link rel="stylesheet" href="../css/customMain.css">
     <title>Home Page</title>
 </head>
 <body>
 
 
-<%- include('./partials/Header.ejs') %> 
-<main>
+<%- include('./partials/Header.ejs') %>
 
-  <section>
-    <h1>Home Page</h1>
+<main id="containerMain">
+
+  <section class="customSection">
+
+    <h1>Pagina inicial</h1>
     <h3>Plataforma de perguntas</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-     Doloremque expedita repellendus
-     dolore vero animi quam necessitatibus optio adipisci numquam distinctio
-     eaque officia explicabo et debitis ea aperiam at, nam nihil?
-     </p>
+    <p>
+      Neste plataforma você poderá fazer diversas perguntas,
+      sobre qualquer tema :).
+      Sinta-se a vontade,pois aqui
+      você terá todo suporte necessário!.
+    </p>
+    <p>Clicando no botao abaixo você terá acesso ao forum e
+      ao histórico de perguntas.
+    </p>
     <button class="btn btn-info perguntar">acessar</button>
   </section>
-  <section>
+
+  <section class="customSection">
     <h2>Sobre nós</h2>
     <p>Lorem ipsum dolor sit amet.</p>
     <img src="/" alt="image teste">
   </section>
+
 </main>
 
 <%- include('./partials/Footer.ejs') %> 
