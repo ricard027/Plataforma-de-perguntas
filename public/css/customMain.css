@@ -3,7 +3,7 @@
     height: 80vh;
     gap: 2rem;
     margin-top: 1rem;
-   justify-content: center;
+    justify-content: center;
 
 }
 
@@ -18,8 +18,16 @@
     padding: 1rem;
 }
 
+#containerMain .customSection h1{
+ color:#333;
+}
+
+#containerMain .customSection h3 {
+    color: #0caccc;
+}
+
 #containerMain .customSection p{
     text-align: justify;
     margin-top: 1rem;
-    color: #333;
+    color: #373737;
 }

@@ -1,8 +1,9 @@
-const express =  require('express');
+const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const conection = require("./database/database.js");
-const perguntaModel = require('./database/Pergunta')
+const perguntaModel = require('./database/Pergunta');
+
 //database
 
 conection.authenticate()
@@ -33,10 +34,11 @@ app.get('/Perguntar',(req,res)=>{
 app.post('/ListaPerguntas',(req,res)=>{
      const titulo = req.body.titulo;
      const assunto = req.body.assunto;
-
-     res.send(`<div><h6>${titulo}</h6>
-                    <p>${assunto}</p>
-              </div>`)
+      
+     perguntaModel.create({
+        titulo: titulo,
+        assunto:assunto
+     }).then(()=>res.redirect('/'))
 })
  
 
