@@ -1,10 +1,19 @@
 const express =  require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const conection = require("./database/database.js");
+const perguntaModel = require('./database/Pergunta')
+//database
 
+conection.authenticate()
+ .then(()=> console.log('conexao criada'))
+ .catch((error)=> console.log(error))
+
+//bodyparser
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json())
 
+//rotas
 app.set('view engine','ejs')
 app.use(express.static('public'))
 
