@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/customMain.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css  ">
+    <title>PerguntasSalvas</title>
 </head>
 <body>
 <%- include('./partials/Header.ejs') %>
 <h1>Perguntas salvas</h1>
-<ul>
+<ul class="container" id="resetUl">
     <% perguntas.map(per =>{ %>
-        <li>
-          <h5><%=per.titulo%></h5>
-          <p><%=per.assunto%></p>
+        <li class="shadow p-3 mb-5 bg-body rounded">
+          <h5 class="text-success"><%=per.titulo%></h5>
+          <p class="text-secondary"><%=per.assunto%></p>
+           <button class="btn btn-info">responder</button>
+           <button class="btn btn-danger">remover</button>
         </li>
     <%}) %> 
   </ul>
