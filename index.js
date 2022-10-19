@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const conection = require("./database/database.js");
-const perguntaModel = require('./database/Pergunta');
+const Perguntas = require('./database/Pergunta');
 
 //database
 
@@ -19,9 +19,8 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 
 app.get('/',(req,res)=>{
-    
-    res.render('index')
-    
+    res.render('index');
+  
  })
 
 
@@ -30,12 +29,20 @@ app.get('/Perguntar',(req,res)=>{
     res.render('Perguntar')
     
  })
+ app.get('/PerguntasSalvas',(req,res)=>{
+
+   Perguntas.findAll({raw:true}).then((per)=>
+   res.render('PerguntasSalvas',{
+     perguntas:per,
+   }))
+})
+
 
 app.post('/ListaPerguntas',(req,res)=>{
      const titulo = req.body.titulo;
      const assunto = req.body.assunto;
       
-     perguntaModel.create({
+     Perguntas.create({
         titulo: titulo,
         assunto:assunto
      }).then(()=>res.redirect('/'))
